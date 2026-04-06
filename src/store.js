@@ -86,6 +86,7 @@ export const ACTIVITY_TYPES = [
   { value: 'podcast', label: 'Podcast', emoji: '🎧' },
   { value: 'video', label: '動画', emoji: '📹' },
   { value: 'conversation', label: 'オンライン英会話', emoji: '💬' },
+  { value: 'ai', label: 'AI英会話', emoji: '🤖' },
   { value: 'reading', label: '読書', emoji: '📚' },
   { value: 'other', label: 'その他', emoji: '✏️' },
 ];
