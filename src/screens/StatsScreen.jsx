@@ -2,7 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { getLogs, getPhrases, exportData, importData, ACTIVITY_TYPES } from '../store.js';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
-const ACT_COLORS = { podcast: '#f0526b', video: '#5b52f0', conversation: '#22c55e', reading: '#f59e0b', other: '#94a3b8' };
+const ACT_COLORS = {
+  podcast:      '#f9a8b8', // ピンク
+  video:        '#a5b4fc', // ラベンダー
+  conversation: '#86efac', // ミントグリーン
+  reading:      '#fcd34d', // イエロー
+  ai:           '#67e8f9', // 水色（追加した場合）
+  other:        '#cbd5e1', // グレー
+};
 
 export default function StatsScreen() {
   const [logs, setLogs] = useState([]);
@@ -64,7 +71,7 @@ export default function StatsScreen() {
   return (
     <div className="page">
       <div className="page-header">
-        <h1 style={{ fontSize: 24, fontWeight: 800 }}>統計 📊</h1>
+        <h1 style={{ fontSize: 24, fontWeight: 800 }}>統計</h1>
       </div>
 
       <div className="page-body" style={{ paddingBottom: '100px', display: 'flex', flexDirection: 'column', gap: 14 }}>
